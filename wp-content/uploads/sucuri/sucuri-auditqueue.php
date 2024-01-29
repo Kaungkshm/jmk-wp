@@ -16,3 +16,5 @@ exit(0);
 1706494531_806:"Warning: admin, 127.0.0.1; Plugin activated: Remove admin menus by roles (v1.35; remove-admin-menus-by-role\/remove-admin-menus-by-role.php)"
 1706494577_4383:"Warning: admin, 127.0.0.1; Plugin deactivated: Limit Login Attempts Reloaded (v2.25.29; limit-login-attempts-reloaded\/limit-login-attempts-reloaded.php)"
 1706494613_6791:"Warning: admin, 127.0.0.1; Plugin activated: Advanced Custom Fields (v6.2.5; advanced-custom-fields\/acf.php)"
+1706498531_593:"Notice: 127.0.0.1; User authentication succeeded: admin"
+1706498690_5198:"Critical: admin, 127.0.0.1; WordPress updated to version: 6.4.2"

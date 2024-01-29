@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary: #0542bf;
+  --secondary: #2d83f2;
+  --gray: #666;
+  --black: #222222;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Playfair Display", serif; */
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.header-1 h1 {
+  color: var(--primary);
+  font-family: "Playfair Display";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .header-1 h1 {
+    color: var(--primary);
+    font-family: "Playfair Display";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .navbar .container-fluid {
+    padding: 20px 0px;
+  }
+}
+
+.header-2 {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+.header-2 .navbar .navbar-nav a {
+  color: var(--white);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.dropdown-menu.show {
+  border: 0;
+  border-radius: 0;
+  margin-top: 15px;
+  width: 180px;
+  /* padding-left: 5px; */
+}
+
+.dropdown-item {
+  color: var(--black) !important;
+  transition: background-color, color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.navbar-expand-lg {
+  padding-bottom: 0;
+}
+.navbar-nav .nav-item .nav-link {
+  padding: 15px 0;
+  border-bottom: 3px solid transparent;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  border-bottom: 3px solid var(--white);
+}
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+.navbar-toggler {
+  border-color: white !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.title-5 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.title-4 {
+  color: var(--white);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: justify;
+}
+
+.title-6 {
+  color: var(--primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.title-2 {
+  color: var(--black);
+  font-family: "Playfair Display";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .title-2 {
+    color: var(--black);
+    font-family: "Playfair Display";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+
+.content-1 {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+}
+.content-2 {
+  color: var(--gray);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.content-3 {
+  color: var(--white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-all {
+  border-radius: 0 !important;
+  background-color: var(--secondary) !important;
+  /* width: 180px; */
+  color: var(--white) !important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 8px 20px !important;
+}
+
+.btn-all:hover {
+  background-color: var(--primary) !important;
+}
+.btn-all img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-all:hover img {
+  transform: rotate(46deg);
+}
+
+.home-gallery {
+  background-color: #f2f2f2;
+}
+
+.footer-1 {
+  background-color: var(--primary);
+  padding-top: 80px;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--white) !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--white);
+  font-family: "Playfair Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  color: var(--white);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+}
+.goals-title {
+  color: #0542bf;
+  font-family: "Playfair Display";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.goals-text {
+  color: var(--gray);
+  text-align: justify;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form-control {
+  padding: 13px !important;
+  color: var(--gray) !important;
+}
+.form-control::placeholder {
+  color: lightgray !important;
+}
+.contact-title {
+  color: var(--black);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact-text {
+  color: #666;
+  text-align: justify;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.img-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.img-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.img-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .img-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .img-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.contact-form {
+  width: 500px;
+}
+@media (max-width: 1047px) {
+  .contact-form {
+    width: 100%;
+  }
+}
+.btn-contact {
+  border: 0;
+  background-color: var(--secondary);
+  color: var(--white);
+  width: 100%;
+  padding: 8px 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-contact:hover {
+  background-color: var(--primary);
+}
+
+.service-hover img {
+  transition: transform 0.3s ease-in-out;
+}
+.service-hover:hover img {
+  transform: scale(1.1);
+}
+.service-hover {
+  position: relative;
+  overflow: hidden;
+}
+.service-overlay {
+  position: absolute;
+  bottom: -10%;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.service-hover:hover .service-overlay {
+  bottom: 5%;
+}
+
+.so-text {
+  color: var(--white);
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.service-overlay .btn-all img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-overlay .btn-all:hover img {
+  transform: rotate(46deg);
+}
+
+.gallery-hover {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery-hover .gallery-img {
+  transition: transform 0.3s ease-in-out;
+}
+.gallery-hover:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-overlay .gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gallery-hover:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 0 !important;
+}
+
+.close-btn {
+  position: absolute;
+  z-index: 3;
+  background: none;
+  border: 0;
+  top: 2%;
+  right: 2%;
+}
+.gallery-button {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.carousel-control-prev {
+  /* position: absolute; */
+  left: -100% !important;
+}
+
+.carousel-control-next {
+  right: -100% !important;
+}

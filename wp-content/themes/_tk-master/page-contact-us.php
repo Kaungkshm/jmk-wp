@@ -19,22 +19,24 @@
     <section class="contact my-5 py-5">
         <div class="container">
             <div class="row gy-5">
-                <div class="col-md-6">
+                <div class="col-lg-6 col-12">
+
                     <h2 class="title-2">Let Us Know <br>
                         What You Think!</h2>
                     <div class="address">
                         <h6 class="contact-title mt-5">Contact Us</h6>
                         <div class="contact-text my-4">
+
                             <div class="d-flex my-2">
                                 <div>
                                     <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/address.png"
                                         alt="">
                                 </div>
                                 <div class="ms-3">
-                                    <p>(34), Room (11), Shwe Ohn Pin Housing (2),<br> Yanshin Road, 5th
+                                    <p style="padding-right: 250px;">(34), Room (11), Shwe Ohn Pin Housing (2), Yanshin
+                                        Road, 5th
                                         Quarter,
-                                        West
-                                        <br>Yankin, Yankin Township, Yangon, Myanmar.
+                                        West Yankin, Yankin Township, Yangon, Myanmar.
                                     </p>
                                 </div>
                             </div>
@@ -44,7 +46,9 @@
                                         alt="">
                                 </div>
                                 <div class="ms-3">
-                                    <p>+959776839875</p>
+                                    <p>
+
+                                    </p>
                                 </div>
                             </div>
                             <div class="d-flex my-2">
@@ -88,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6 col-12">
                     <div class="contact-form mt-4">
                         <form action="">
                             <div class="mb-4">
@@ -128,5 +132,4 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 </main>
-
 <?php include('footer.php'); ?>

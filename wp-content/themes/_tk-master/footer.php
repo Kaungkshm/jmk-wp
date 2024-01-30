@@ -45,10 +45,8 @@
 										alt="">
 								</div>
 								<div class="ms-3">
-									<p>(34), Room (11), Shwe Ohn Pin Housing (2),<br> Yanshin Road, 5th
-										Quarter,
-										West
-										<br>Yankin, Yankin Township, Yangon, Myanmar.
+									<p>(34), Room (11), Shwe Ohn Pin Housing (2), Yanshin Road, 5th
+										Quarter, West Yankin, Yankin Township, Yangon, Myanmar.
 									</p>
 								</div>
 							</div>

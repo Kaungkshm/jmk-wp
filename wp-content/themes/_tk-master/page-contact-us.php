@@ -26,41 +26,50 @@
                     <div class="address">
                         <h6 class="contact-title mt-5">Contact Us</h6>
                         <div class="contact-text my-4">
-
-                            <div class="d-flex my-2">
-                                <div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/address.png"
-                                        alt="">
+                            <?php $address = new WP_Query(
+                                array(
+                                    'post_type' => 'address',
+                                    'posts_per_page' => '1'
+                                )
+                            );
+                            while ($address->have_posts()):
+                                $address->the_post()
+                                    ?>
+                                <div class="d-flex my-2">
+                                    <div>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/address.png"
+                                            alt="">
+                                    </div>
+                                    <div class="ms-3">
+                                        <p style="padding-right: 250px;">
+                                            <?php echo the_field('address'); ?>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="ms-3">
-                                    <p style="padding-right: 250px;">(34), Room (11), Shwe Ohn Pin Housing (2), Yanshin
-                                        Road, 5th
-                                        Quarter,
-                                        West Yankin, Yankin Township, Yangon, Myanmar.
-                                    </p>
+                                <div class="d-flex my-2">
+                                    <div>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/tele-blue.png"
+                                            alt="">
+                                    </div>
+                                    <div class="ms-3">
+                                        <p>
+                                            <?php echo the_field('phone'); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex my-2">
+                                    <div>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/mail-blue.png"
+                                            alt="">
+                                    </div>
+                                    <div class="ms-3">
+                                        <p>
+                                            <?php echo the_field('mail'); ?>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-flex my-2">
-                                <div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/tele-blue.png"
-                                        alt="">
-                                </div>
-                                <div class="ms-3">
-                                    <p>
-
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="d-flex my-2">
-                                <div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/mail-blue.png"
-                                        alt="">
-                                </div>
-                                <div class="ms-3">
-                                    <p>crewing.moekhaing@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endwhile; ?>
                     </div>
                     <div class="social-media">
                         <h6 class="contact-title mt-5">Follow us on social media</h6>
@@ -94,15 +103,16 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="contact-form mt-4">
-                        <form action="">
+                        <?php echo do_shortcode('[contact-form-7 id="8ae633c" title="Contact form 1"]'); ?>
+                        <!-- <form action="">
                             <div class="mb-4">
-                                <input type="text" class="form-control edit-form" placeholder="Name">
+                                <input type="text" class="form-control" placeholder="Name">
                             </div>
                             <div class="mb-4">
-                                <input type="email" class="form-control edit-form" placeholder="Email">
+                                <input type="email" class="form-control" placeholder="Email">
                             </div>
                             <div class="mb-4">
-                                <input type="text" class="form-control edit-form" placeholder="Phone Number">
+                                <input type="text" class="form-control" placeholder="Phone Number">
                             </div>
                             <div class="mb-4">
                                 <textarea name="" id="" cols="30" rows="10" placeholder="Type Your Message Here.."
@@ -119,7 +129,7 @@
                                         alt="">
                                 </div>
                             </div>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>

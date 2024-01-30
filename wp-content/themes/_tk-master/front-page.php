@@ -20,135 +20,156 @@
             </div>
         </div>
     </section>
-    <section class="home-about my-5 py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/index/home-about.png"
-                        alt="" class="w-100">
+    <?php $home_page = new WP_Query(
+        array(
+            'post_type' => 'home_page',
+            'posts_per_page' => '1'
+        )
+    );
+    while ($home_page->have_posts()):
+        $home_page->the_post()
+            ?>
+        <section class="home-about my-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <?php
+                        $image = get_field('about_img');
+                        if (!empty($image)): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                                class="w-100">
+                        <?php endif; ?>
+                    </div>
+                    <div class="col-md-6 py-5">
+                        <div class="d-flex">
+                            <div>
+                                <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/anchor.png"
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="title-6">About of Company</h6>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h2 class="title-2">Find and Book <br>
+                                Your Dream</h2>
+                        </div>
+                        <div class="my-4">
+                            <p class="content-1">
+                                <?php echo the_field('about_text_1'); ?>
+                            </p>
+                        </div>
+                        <div class="my-4">
+                            <p class="content-2">
+                                <?php echo the_field('about_text_2'); ?>
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            <a href="about-us" class="btn btn-all">
+                                <div class="d-flex">
+                                    <div>
+                                        READ MORE
+                                    </div>
+                                    <div class="ms-2">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/down-right.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 py-5">
-                    <div class="d-flex">
-                        <div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/anchor.png"
-                                alt="" class="w-100">
+
+            </div>
+        </section>
+        <section class="home-service my-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div>
+                                <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/anchor.png"
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="title-6">Service of Company</h6>
+                            </div>
                         </div>
-                        <div class="ms-3">
-                            <h6 class="title-6">About of Company</h6>
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <h2 class="title-2">Find and Book <br>
-                            Your Dream</h2>
-                    </div>
-                    <div class="my-4">
-                        <p class="content-1">Moe Khaing Asia Logistics International Co., Ltd was <br> established
-                            in year 2006.</p>
-                    </div>
-                    <div class="my-4">
-                        <p class="content-2">Moe Khaing Asia Logistics International Co., Ltd is operating as
-                            provision of crew manning services in accordance with national, international
-                            requirements and preparing to recruit Myanmar seafarers under full crew management
-                            services for Cruises.
+                        <h2 class="title-2 my-4">Know What You're Looking for? </h2>
+                        <p class="content-2">
+                            <?php echo the_field('service_text'); ?>
 
                         </p>
                     </div>
-                    <div class="pt-4">
-                        <a href="about-us.php" class="btn btn-all">
-                            <div class="d-flex">
-                                <div>
-                                    READ MORE
-                                </div>
-                                <div class="ms-2">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/down-right.png"
-                                        alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="home-service my-5 py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="d-flex">
-                        <div>
-                            <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/anchor.png"
-                                alt="" class="w-100">
-                        </div>
-                        <div class="ms-3">
-                            <h6 class="title-6">Service of Company</h6>
-                        </div>
-                    </div>
-                    <h2 class="title-2 my-4">Know What You're Looking for? </h2>
-                    <p class="content-2">We provide crew management for various cruise ships starting from screening
-                        of crew personal
-                        from various sources, validity check for certificates, interview with potential candidates.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="service-hover">
-                                <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/index/home-about-1.png"
-                                    alt="" class="w-100">
-                                <div class="ms-5 service-overlay">
-                                    <div>
-                                        <h3 class="so-text">Manning</h3>
-                                    </div>
-                                    <div class="pt-4">
-                                        <a href="manning.php" class="btn btn-all">
-                                            <div class="d-flex">
-                                                <div>
-                                                    READ MORE
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="service-hover">
+                                    <?php
+                                    $image = get_field('service_img_1');
+                                    if (!empty($image)): ?>
+                                        <img src="<?php echo esc_url($image['url']); ?>"
+                                            alt="<?php echo esc_attr($image['alt']); ?>" class="w-100">
+                                    <?php endif; ?>
+                                    <div class="ms-5 service-overlay">
+                                        <div>
+                                            <h3 class="so-text">Manning</h3>
+                                        </div>
+                                        <div class="pt-4">
+                                            <a href="manning" class="btn btn-all">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        READ MORE
+                                                    </div>
+                                                    <div class="ms-2">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/down-right.png"
+                                                            alt="">
+                                                    </div>
                                                 </div>
-                                                <div class="ms-2">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/down-right.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-hover">
-                                <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/index/home-about-2.png"
-                                    alt="" class="w-100">
-                                <div class="ms-5 service-overlay">
-                                    <div>
-                                        <h3 class="so-text">Training</h3>
-                                    </div>
-                                    <div class="pt-4">
-                                        <a href="training.php" class="btn btn-all">
-                                            <div class="d-flex">
-                                                <div>
-                                                    VIEW MORE
+                            <div class="col-md-6">
+                                <div class="service-hover">
+                                    <?php
+                                    $image = get_field('service_img_2');
+                                    if (!empty($image)): ?>
+                                        <img src="<?php echo esc_url($image['url']); ?>"
+                                            alt="<?php echo esc_attr($image['alt']); ?>" class="w-100">
+                                    <?php endif; ?>
+                                    <div class="ms-5 service-overlay">
+                                        <div>
+                                            <h3 class="so-text">Training</h3>
+                                        </div>
+                                        <div class="pt-4">
+                                            <a href="training" class="btn btn-all">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        VIEW MORE
+                                                    </div>
+                                                    <div class="ms-2">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/down-right.png"
+                                                            alt="">
+                                                    </div>
                                                 </div>
-                                                <div class="ms-2">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/down-right.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endwhile; ?>
     <section class="home-gallery py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 py-5 mb-4">
+                <div class="col-md-12 pt-5">
                     <div class="d-flex justify-content-center">
                         <div>
                             <img src="<?php echo get_template_directory_uri(); ?>/includes/jmk-template/images/icon/anchor.png"
@@ -193,7 +214,7 @@
 
                 </div>
                 <div class="mt-5 pb-5 text-center">
-                    <a href="gallery.php" class="btn btn-all">
+                    <a href="gallery" class="btn btn-all">
                         <div class="d-flex">
                             <div>
                                 VIEW MORE

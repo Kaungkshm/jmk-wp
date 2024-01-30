@@ -182,3 +182,5 @@ function woocommerce_support()
 {
 	add_theme_support('woocommerce');
 }
+
+add_filter('wpcf7_autop_or_not', '__return_false');

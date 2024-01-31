@@ -79,7 +79,7 @@
 												</div>
 											</a>
 										</li>
-										<li class="nav-item ms-lg-5">
+										<li class="nav-item ms-lg-5 dp">
 											<a class="text-white" href="#">
 												<div class="d-flex">
 													<div>

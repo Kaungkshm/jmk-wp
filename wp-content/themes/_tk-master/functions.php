@@ -128,6 +128,8 @@ function _tk_scripts()
 	// load bootstrap js
 	wp_enqueue_script('_tk-bootstrapjs', THEME_DIR_URI . '/includes/jmk-template/js/bootstrap.bundle.min.js', array('jquery'));
 
+	wp_enqueue_script('_tk-jquery', THEME_DIR_URI . '/includes/jmk-template/js/jquery.min.js', array('jquery'));
+
 	// load bootstrap wp js
 	wp_enqueue_script('_tk-bootstrapwp', THEME_DIR_URI . '/includes/js/bootstrap-wp.js', array('jquery'));
 

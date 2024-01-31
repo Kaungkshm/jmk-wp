@@ -115,6 +115,36 @@
 	</div>
 </footer>
 </body>
+<script>
+
+	$(".current").on("click", function () {
+		// alert("ss");
+		$current = $(this).attr("data-current");
+		// alert($current);
+		$html = $current + ' / ' + totalItems;
+		$("#carousel-count").html($html);
+		$("#currentConuter").val($current);
+	});
+
+	var currentCounter = $("#currentConuter").val();
+	console.log(currentCounter);
+	var totalItems = <?php echo $gallery->post_count; ?>;
+
+	function updateCount() {
+		currentCounter++;
+		if (currentCounter > totalItems) {
+			currentCounter = 1;
+		}
+		document.getElementById('carousel-count').innerText = currentCounter + ' / ' + totalItems;
+	}
+	function preCount() {
+		currentCounter--;
+		if (currentCounter < 1) {
+			currentCounter = totalItems;
+		}
+		document.getElementById('carousel-count').innerText = currentCounter + ' / ' + totalItems;
+	}
+</script>
 
 <?php wp_footer(); ?>
 
